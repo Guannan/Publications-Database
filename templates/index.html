@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications Tracker</title>
+    <!-- Add any additional CSS or JS links here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container mt-4">
+        <!-- Search Section -->
+        <section class="mb-4">
+            <h2>Search Publications</h2>
+            <form id="search-form" class="mb-3">
+                <div class="form-group row">
+                    <label for="search-question" class="col-sm-2 col-form-label">Question:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="search-question" class="form-control" placeholder="Enter your question">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </section>
+
+        <!-- Add Publication Section -->
+        <section class="mb-4">
+            <h2>Add a New Publication</h2>
+            <form id="publication-form">
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Title:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="title" class="form-control" placeholder="Title">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="year" class="col-sm-2 col-form-label">Year:</label>
+                    <div class="col-sm-10">
+                        <input type="number" id="year" class="form-control" placeholder="Year">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="journal" class="col-sm-2 col-form-label">Journal:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="journal" class="form-control" placeholder="Journal">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="summary" class="col-sm-2 col-form-label">Summary:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="summary" class="form-control" placeholder="Summary"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="methodologies" class="col-sm-2 col-form-label">Methodologies:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="methodologies" class="form-control"
+                            placeholder="Methodologies"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="outcomes" class="col-sm-2 col-form-label">Outcomes:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="outcomes" class="form-control" placeholder="Outcomes"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="data_sources" class="col-sm-2 col-form-label">Data Sources:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="data_sources" class="form-control"
+                            placeholder="Data Sources"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="research_questions" class="col-sm-2 col-form-label">Research Questions:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="research_questions" class="form-control"
+                            placeholder="Research Questions"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Add Publication</button>
+            </form>
+        </section>
+
+        <section class="mb-4">
+            <h2>Update Existing Publication</h2>
+            <form id="update-form">
+                <div class="form-group row">
+                    <label for="update-id" class="col-sm-2 col-form-label">Update ID:</label>
+                    <div class="col-sm-10">
+                        <input type="number" id="update-id" class="form-control" placeholder="Publication ID">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-title" class="col-sm-2 col-form-label">Update Title:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="update-title" class="form-control" placeholder="Title">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-year" class="col-sm-2 col-form-label">Update Year:</label>
+                    <div class="col-sm-10">
+                        <input type="number" id="update-year" class="form-control" placeholder="Year">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-journal" class="col-sm-2 col-form-label">Update Journal:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="update-journal" class="form-control" placeholder="Journal">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-summary" class="col-sm-2 col-form-label">Update Summary:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="update-summary" class="form-control" placeholder="Summary"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-methodologies" class="col-sm-2 col-form-label">Update Methodologies:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="update-methodologies" class="form-control"
+                            placeholder="Methodologies"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-outcomes" class="col-sm-2 col-form-label">Update Outcomes:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="update-outcomes" class="form-control"
+                            placeholder="Outcomes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-data_sources" class="col-sm-2 col-form-label">Update Data Sources:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="update-data_sources" class="form-control"
+                            placeholder="Data Sources"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="update-research_questions" class="col-sm-2 col-form-label">Update Research
+                        Questions:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" id="update-research_questions" class="form-control"
+                            placeholder="Research Questions"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning">Update Publication</button>
+            </form>
+        </section>
+
+        <section class="mb-4">
+            <h2>Delete Publication</h2>
+            <form id="delete-form">
+                <input type="number" id="delete-id" placeholder="Publication ID" required>
+                <button type="submit" class="btn btn-danger">Delete Publication</button>
+            </form>
+        </section>
+
+        <script>
+            // JavaScript for Search Functionality
+            document.getElementById('search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const question = document.getElementById('search-question').value;
+
+                fetch('/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question: question }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('search-results');
+                    resultsDiv.innerHTML = '<h3>Results:</h3>';
+                    data.forEach(article => {
+                        resultsDiv.innerHTML += `<div><p><strong>Title:</strong> ${article.title}</p>
+                                                <p><strong>Year:</strong> ${article.year}</p>
+                                                <p><strong>Journal:</strong> ${article.journal}</p>
+                                                <p><strong>Summary:</strong> ${article.summary}</p>
+                                                <!-- Display other fields similarly -->
+                                                </div><hr>`;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+            });
+
+            // JavaScript for Add Publication Functionality
+            document.getElementById('publication-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const data = {
+                    title: document.getElementById('title').value,
+                    year: document.getElementById('year').value,
+                    journal: document.getElementById('journal').value,
+                    summary: document.getElementById('summary').value,
+                    methodologies: document.getElementById('methodologies').value,
+                    outcomes: document.getElementById('outcomes').value,
+                    data_sources: document.getElementById('data_sources').value,
+                    research_questions: document.getElementById('research_questions').value
+                };
+
+                fetch('/add_publication', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        alert('Publication added successfully');
+                        // Optionally, clear form here
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('Error adding publication');
+                    });
+            });
+
+            // JavaScript for Update Publication Functionality
+            document.getElementById('update-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const publicationId = document.getElementById('update-id').value;
+                const updatedData = {
+                    title: document.getElementById('update-title').value,
+                    year: document.getElementById('update-year').value,
+                    journal: document.getElementById('update-journal').value,
+                    summary: document.getElementById('update-summary').value,
+                    methodologies: document.getElementById('update-methodologies').value,
+                    outcomes: document.getElementById('update-outcomes').value,
+                    data_sources: document.getElementById('update-data_sources').value,
+                    research_questions: document.getElementById('update-research_questions').value
+                };
+
+                fetch(`/update_publication/${publicationId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(updatedData),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        alert('Publication updated successfully');
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('Error updating publication');
+                    });
+            });
+
+            // JavaScript for Delete Publication Functionality
+            document.getElementById('delete-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const publicationId = document.getElementById('delete-id').value;
+
+                fetch(`/delete_publication/${publicationId}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        alert('Publication deleted successfully');
+                        // Optionally, clear form or update UI here
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('Error deleting publication');
+                    });
+            });
+        </script>
+
+</body>
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
